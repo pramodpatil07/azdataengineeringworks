@@ -1,0 +1,7 @@
+{
+	"name": "az_sourcing",
+	"properties": {
+		"description": "Stage to ingest the data into Azure Data Lake. ",
+		"annotations": []
+	}
+}
