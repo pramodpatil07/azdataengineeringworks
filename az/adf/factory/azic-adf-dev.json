@@ -1,0 +1,9 @@
+{
+	"name": "azic-adf-dev",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ea156857-e34e-4eb7-b245-ef8af47c84ae",
+		"tenantId": "05f2f319-5fde-4789-aae6-d59ad7704685"
+	}
+}
