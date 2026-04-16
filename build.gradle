@@ -1,17 +1,38 @@
 plugins {
     id 'scala'
+    id 'com.gradleup.shadow' version '8.3.3'
 }
 
-repositories {
-    mavenCentral()
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    apply plugin: 'scala'
+
+    dependencies {
+        compileOnly 'org.apache.spark:spark-core_2.13:4.0.0'
+        compileOnly 'org.apache.spark:spark-sql_2.13:4.0.0'
+        implementation 'io.delta:delta-spark_2.13:3.0.0'
+    }
+
+    scala {
+        zincVersion = '1.9.7'
+    }
 }
 
 dependencies {
-    implementation 'org.apache.spark:spark-core_2.12:4.0.0'
-    implementation 'org.apache.spark:spark-sql_2.12:4.0.0'
-    implementation 'io.delta:delta-spark_2.12:3.0.0'
+    implementation project(':azworks')
+    implementation project(':azworksutils')
+    compileOnly 'org.apache.spark:spark-core_2.13:4.0.0'
+    compileOnly 'org.apache.spark:spark-sql_2.13:4.0.0'
+    compileOnly 'io.delta:delta-spark_2.13:3.0.0'
 }
 
-scala {
-    zincVersion = '1.9.7'
+shadowJar {
+    archiveBaseName = 'azdataengineeringworks'
+    archiveClassifier = ''
+    zip64 = true
 }

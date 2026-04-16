@@ -1,0 +1,4 @@
+rootProject.name = 'azdataengineeringworks'
+
+include 'azworks'
+include 'azworksutils'
