@@ -1,0 +1,17 @@
+plugins {
+    id 'scala'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.spark:spark-core_2.12:4.0.0'
+    implementation 'org.apache.spark:spark-sql_2.12:4.0.0'
+    implementation 'io.delta:delta-spark_2.12:3.0.0'
+}
+
+scala {
+    zincVersion = '1.9.7'
+}

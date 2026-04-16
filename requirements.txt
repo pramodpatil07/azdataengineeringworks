@@ -1,0 +1,6 @@
+pyspark==4.0.0
+# Install this only if you want to use Databricks Connect against DBR 17.3 LTS
+# Note: configure databricks-connect after installing it.
+databricks-connect==17.3.0
+# Optional if you write Delta Lake tables locally
+delta-spark==4.0.0
