@@ -1,0 +1,9 @@
+{
+  "app_name": "azpyworks",
+  "environment": "dev",
+  "storage": {
+    "landing_path": "/mnt/landing",
+    "processed_path": "/mnt/processed",
+    "archive_path": "/mnt/archive"
+  }
+}
